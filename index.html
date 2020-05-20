@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    <script async src="./index.js"></script>
+    <style>
+        td {
+            width: 50%;
+            height: 60px;
+            text-align: center;
+            border: solid orangered 1px
+        }
+
+        table {
+            background-color: rgb(31, 63, 38);
+            width: 40%;
+            position: relative;
+            top: 25px;
+            left: 10%;
+        }
+    </style>
+</head>
+<body>
+<table id="table">
+    <tr>
+        <td colspan="2"><div>
+                <h4 id="label">Audi</h4>
+                <img id="logo" height="150px" src="resource/audi.png" onclick="togglePicture()" alt="auto_logo">
+            </div></td>
+    </tr>
+    <tr>
+        <td><button type="button" class="btn btn-primary" onclick="changeButtonText()" id="changeText">Button</button></td>
+        <td><p id="text">
+                И труд нелеп, и бестолкова праздность, <br>
+                И с плеч долой всё та же голова, <br>
+                Когда приходит бешеная ясность, <br>
+                Насилуя притихшие слова.
+            </p></td>
+    </tr>
+    <tr>
+        <td><button type="button" class="btn btn-primary" onclick="showDialogBox()">Click and input</button></td>
+        <td><h4 id="welcome-text"></h4></td>
+    </tr>
+    <tr>
+        <td colspan="2"><button type="button" class="btn btn-primary" onclick="changeBackground()">Change background</button></td>
+    </tr>
+</table>
+
+
+<div style="text-align: center; vertical-align: middle" id="container">
+    <div class="modal" style="width: 40%; left: 30%; top: 30% " id="modal">
+        <div class="modal-content">
+            <h4 class="modal-title" id="modalLabel">Enter your name</h4>
+            <input id="input" type="text" class="form-control">
+            <div class="modal-footer">
+                <button class="btn btn-warning" id="cancel-button" onclick="closeDialogBox()">Cancel</button>
+                <button class="btn btn-success" id="ok-button" onclick="submitDialogBox()">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
